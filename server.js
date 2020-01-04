@@ -13,6 +13,9 @@ const app = express()
 // body parser
 app.use(express.json());
 
+// Set static folder
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Connect to database
 connectDB()
 
