@@ -14,8 +14,32 @@
     <div class="container my-3">
         <h1 class="display-4 text-center"><i class="fas fa-map-marked mr-4" ></i> Store Locator</h1>
         <a href="add.html" class="btn btn-success mb-4">Add Store</a>
-        <div id='map' style='width: 600px; height: 400px; margin: 0 auto'></div>
-        <script src="js/map.js"></script>
+        <div id='map' style='width: 100%; height: 400px; margin: 0 auto'></div>
+        <div class="list-header">List Of Stores</div>
+        <div id="avaliable-shops">
+
+        </div>
     </div>
+    <style>
+      .list-header {
+        font-weight: 800;
+        font-size: 24px;
+        padding: 10px 0px;
+      }
+      .list-items {
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 18px;
+        color: rgb(170, 170, 170);
+        padding: 10px 0px;
+        border-bottom: 1px solid rgba(185, 185, 185, 0.5);
+        transition: 0.5s;
+      }
+      .list-items:hover {
+        font-size: 18.5px;
+        color: black;
+      }
+    </style>
+    <script src="js/map.js"></script>
 </body>
 </html>

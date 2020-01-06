@@ -40,7 +40,7 @@ StoreShema.pre('save', async function(next) {
         formattedAddress: loc[0].formattedAddress 
     }
     // Do not save address
-    this.address = undefined;
+    // this.address = undefined;
     next()
 });
 
