@@ -10,8 +10,10 @@ const map = new mapboxgl.Map({
 
 // fetch Store list
 function fetchStoresList(data) {
+  let formatedAddress;
   data.data.forEach(store => {
-    storeList.innerHTML += `<div class="list-items" onclick="viewMap(${[ store.location.coordinates[0], store.location.coordinates[1] ]})">${store.address}</div>`
+    formatedAddress = store.location.formattedAddress.split(',').filter( name => name.trim())
+    storeList.innerHTML += `<div class="list-items" onclick="viewMap(${[ store.location.coordinates[0], store.location.coordinates[1] ]})">${formatedAddress.join(',').trim()}</div>`
   });
 }
 
